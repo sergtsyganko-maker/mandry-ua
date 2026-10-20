@@ -1,4 +1,4 @@
-// Отримання елементів
+
 const burger = document.querySelector("#burger");
 const nav = document.querySelector("#nav");
 const modal = document.querySelector("#modal");
@@ -18,7 +18,7 @@ const tourError = document.querySelector("#tourError");
 const messageError = document.querySelector("#messageError");
 const formSuccess = document.querySelector("#formSuccess");
 
-// Дані турів
+
 const toursData = {
   1: {
     title: "Карпати: гори і полонини",
@@ -70,14 +70,14 @@ const toursData = {
   },
 };
 
-// Бургер меню
+
 burger.addEventListener("click", () => {
   nav.classList.toggle("open");
   burger.classList.toggle("active");
   burger.setAttribute("aria-expanded", nav.classList.contains("open"));
 });
 
-// Закриваємо меню при кліку на посилання
+
 const navLinks = document.querySelectorAll(".nav__link");
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
@@ -87,14 +87,14 @@ navLinks.forEach((link) => {
   });
 });
 
-// Модалка (делегування подій)
+
 const toursGrid = document.querySelector(".tours__grid");
 
 toursGrid.addEventListener("click", (e) => {
   const btn = e.target.closest(".tour-btn");
   if (!btn) return;
   
-  // Додано Number() як у викладача
+  
   const id = Number(btn.dataset.id); 
   openModal(id);
 });
@@ -103,7 +103,7 @@ function openModal(id) {
   const tour = toursData[id];
   if (!tour) return;
 
-  // Використовуємо класи, які є у вашому CSS
+  
   modalBody.innerHTML = `
     <h3>${tour.title}</h3>
     <p><strong>${tour.days}</strong> · ${tour.from}</p>
@@ -116,7 +116,7 @@ function openModal(id) {
     <a href="#contact" class="btn" id="modalOrderBtn">Залишити заявку</a>
   `;
 
-  // Прибираємо клас hidden, щоб показати модалку
+  
   modal.classList.remove("hidden"); 
   document.body.style.overflow = "hidden";
 
@@ -127,7 +127,7 @@ function openModal(id) {
 }
 
 function closeModal() {
-  // Додаємо клас hidden, щоб сховати модалку
+  
   modal.classList.add("hidden"); 
   document.body.style.overflow = "";
 }
@@ -141,7 +141,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// FAQ акордеон
+
 const faqItems = document.querySelectorAll(".faq__item");
 faqItems.forEach((item) => {
   const question = item.querySelector(".faq__question");
@@ -150,7 +150,7 @@ faqItems.forEach((item) => {
   });
 });
 
-// Форма
+
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -169,7 +169,7 @@ contactForm.addEventListener("submit", (e) => {
   const tourValue = tourSelect.value;
   const messageValue = messageInput.value.trim();
 
-  // Ім'я
+  
   if (nameValue === "") {
     nameError.textContent = "Будь ласка, введіть ваше ім'я";
     isValid = false;
@@ -178,7 +178,7 @@ contactForm.addEventListener("submit", (e) => {
     isValid = false;
   }
 
-  // Email
+  
   if (emailValue === "") {
     emailError.textContent = "Будь ласка, введіть email";
     isValid = false;
@@ -187,19 +187,19 @@ contactForm.addEventListener("submit", (e) => {
     isValid = false;
   }
 
-  // Телефон
+  
   if (phoneValue !== "" && phoneValue.length < 10) {
     phoneError.textContent = "Введіть коректний номер телефону";
     isValid = false;
   }
 
-  // Тур
+  
   if (tourValue === "") {
     tourError.textContent = "Оберіть тур, який вас цікавить";
     isValid = false;
   }
 
-  // Повідомлення
+  
   if (messageValue === "") {
     messageError.textContent = "Будь ласка, напишіть повідомлення";
     isValid = false;
