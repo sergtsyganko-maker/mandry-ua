@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мандри.UA — Туристична агенція</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">Мандри<span>.UA</span></a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#about" class="nav__link">Про нас</a></li>
+          <li class="nav__item"><a href="#tours" class="nav__link">Тури</a></li>
+          <li class="nav__item"><a href="#reviews" class="nav__link">Відгуки</a></li>
+          <li class="nav__item"><a href="#faq" class="nav__link">FAQ</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Контакти</a></li>
+        </ul>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Основний контент -->
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="container hero__content">
+        <h1 class="hero__title">Відкрий Україну та світ разом з нами</h1>
+        <p class="hero__text">Авторські тури Карпатами, Одесою, Львовом та Європою. Комфорт, враження і турбота про кожну деталь.</p>
+        <a href="#tours" class="btn">Обрати тур</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title">Чому обирають Мандри.UA</h2>
+        <p class="section-subtitle">Ми не просто продаємо тури — ми створюємо історії, які залишаються з вами надовго.</p>
+
+        <div class="advantages">
+          <div class="advantage">
+            <div class="advantage__icon">🗺️</div>
+            <h3 class="advantage__title">Авторські маршрути</h3>
+            <p class="advantage__text">Кожен тур розроблений нашою командою з урахуванням місцевої культури та комфорту.</p>
+          </div>
+          <div class="advantage">
+            <div class="advantage__icon">🚌</div>
+            <h3 class="advantage__title">Зручний трансфер</h3>
+            <p class="advantage__text">Забираємо з дому або зустрічаємо на вокзалі. Все продумано заздалегідь.</p>
+          </div>
+          <div class="advantage">
+            <div class="advantage__icon">💬</div>
+            <h3 class="advantage__title">Підтримка 24/7</h3>
+            <p class="advantage__text">Менеджер завжди на зв'язку під час подорожі. Ви не залишитеся наодинці.</p>
+          </div>
+          <div class="advantage">
+            <div class="advantage__icon">⭐</div>
+            <h3 class="advantage__title">Перевірені гіди</h3>
+            <p class="advantage__text">Працюємо тільки з досвідченими місцевими гідами, які люблять свою справу.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tours -->
+    <section class="tours" id="tours">
+      <div class="container">
+        <h2 class="section-title">Популярні тури</h2>
+        <p class="section-subtitle">Оберіть напрямок — ми подбаємо про все інше</p>
+
+        <div class="tours__grid">
+          <article class="tour-card" data-id="1">
+            <div class="tour-card__img">
+              <img src="./images/tour-1.jpg.jpg" alt="Карпати влітку" />
+              <span class="tour-card__badge">Хіт</span>
+            </div>
+            <div class="tour-card__body">
+              <h3 class="tour-card__title">Карпати: гори і полонини</h3>
+              <p class="tour-card__info">5 днів · зі Львова</p>
+              <p class="tour-card__price">від 6 900 ₴</p>
+              <button class="btn btn--outline tour-btn" data-id="1">Детальніше</button>
+            </div>
+          </article>
+
+          <article class="tour-card" data-id="2">
+            <div class="tour-card__img">
+              <img src="./images/tour-2.jpg.jpg" alt="Одеса, море" />
+            </div>
+            <div class="tour-card__body">
+              <h3 class="tour-card__title">Одеса: море і атмосфера</h3>
+              <p class="tour-card__info">4 дні · з Києва</p>
+              <p class="tour-card__price">від 5 400 ₴</p>
+              <button class="btn btn--outline tour-btn" data-id="2">Детальніше</button>
+            </div>
+          </article>
+
+          <article class="tour-card" data-id="3">
+            <div class="tour-card__img">
+              <img src="./images/tour-3.jpg.jpg" alt="Львів, площа Ринок" />
+            </div>
+            <div class="tour-card__body">
+              <h3 class="tour-card__title">Львів: кава і легенди</h3>
+              <p class="tour-card__info">3 дні · зі Львова</p>
+              <p class="tour-card__price">від 3 800 ₴</p>
+              <button class="btn btn--outline tour-btn" data-id="3">Детальніше</button>
+            </div>
+          </article>
+
+          <article class="tour-card" data-id="4">
+            <div class="tour-card__img">
+              <img src="./images/tour-4.jpg.jpg" alt="Італія, вулиці" />
+              <span class="tour-card__badge">Новинка</span>
+            </div>
+            <div class="tour-card__body">
+              <h3 class="tour-card__title">Італія: Рим і Флоренція</h3>
+              <p class="tour-card__info">8 днів · з Києва</p>
+              <p class="tour-card__price">від 28 500 ₴</p>
+              <button class="btn btn--outline tour-btn" data-id="4">Детальніше</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <h2 class="section-title">Що кажуть мандрівники</h2>
+
+        <div class="reviews__grid">
+          <div class="review">
+            <p class="review__text">«Карпати з Мандри.UA — це було щось неймовірне. Гіди знають кожну стежку, їжа смачна, організація на висоті.»</p>
+            <p class="review__author">— Олена, Київ</p>
+          </div>
+          <div class="review">
+            <p class="review__text">«Перший раз їздила в організований тур і не пошкодувала. Все чітко, комфортно і дуже душевно.»</p>
+            <p class="review__author">— Андрій, Харків</p>
+          </div>
+          <div class="review">
+            <p class="review__text">«Рекомендую! Особливо сподобався тур у Львів. Відчуття, ніби місто показували друзі, а не гіди.»</p>
+            <p class="review__author">— Марія, Дніпро</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <h2 class="section-title">Питання та відповіді</h2>
+        <p class="section-subtitle">Те, що найчастіше запитують</p>
+
+        <div class="faq__list">
+          <div class="faq__item">
+            <button class="faq__question">
+              Чи входять квитки у вартість туру?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>Так, для більшості турів авіа- та залізничні квитки включені. Деталі вказані в описі кожного туру.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">
+              Чи можна подорожувати з дитиною?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>Звісно! Для дітей до 12 років діє знижка 20%. Деякі тури мають вікові обмеження — уточнюйте.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">
+              Як забронювати тур?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>Залиште заявку через форму нижче або зателефонуйте. Менеджер зв'яжеться протягом 2 годин.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">
+              Чи можна скасувати бронювання?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>Так, за 14 днів до виїзду — повернення 100% передоплати. Пізніше — залежно від умов туру.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Залишити заявку</h2>
+        <p class="section-subtitle">Напишіть нам — ми підберемо тур під ваш бюджет і дати</p>
+
+        <form class="form" id="contactForm" novalidate>
+          <div class="form__group">
+            <label for="name">Ваше ім'я *</label>
+            <input type="text" id="name" name="name" placeholder="Як до вас звертатися?" required />
+            <span class="form__error" id="nameError"></span>
+          </div>
+
+          <div class="form__group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            <span class="form__error" id="emailError"></span>
+          </div>
+
+          <div class="form__group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="+380 XX XXX XX XX" />
+            <span class="form__error" id="phoneError"></span>
+          </div>
+
+          <div class="form__group">
+            <label for="tour">Цікавить тур</label>
+            <select id="tour" name="tour">
+              <option value="">Оберіть тур</option>
+              <option value="carpathians">Карпати: гори і полонини</option>
+              <option value="odesa">Одеса: море і атмосфера</option>
+              <option value="lviv">Львів: кава і легенди</option>
+              <option value="italy">Італія: Рим і Флоренція</option>
+              <option value="other">Інший напрямок</option>
+            </select>
+            <span class="form__error" id="tourError"></span>
+          </div>
+
+          <div class="form__group">
+            <label for="message">Коментар *</label>
+            <textarea id="message" name="message" rows="4" placeholder="Бажані дати, кількість людей тощо" required></textarea>
+            <span class="form__error" id="messageError"></span>
+          </div>
+
+          <button type="submit" class="btn">Надіслати заявку</button>
+          <p class="form__success" id="formSuccess"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__logo">Мандри<span>.UA</span></div>
+      <p class="footer__text">Туристична агенція · Україна, 2025</p>
+      <div class="footer__contacts">
+        <a href="tel:+380441234567">+38 (044) 123-45-67</a>
+        <a href="mailto:info@mandry.ua">info@mandry.ua</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal hidden" id="modal">
+    <div class="modal__overlay" id="modalOverlay"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="modalClose" aria-label="Закрити">&times;</button>
+      <div class="modal__body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
